@@ -7,6 +7,7 @@
 # == Supported DB
 #
 # * Arxiv
+# * Dblp
 module MinervaApi
   # Useful stuff
   require 'minerva_api/version'
@@ -16,4 +17,5 @@ module MinervaApi
   require 'minerva_api/models/paper'
   # DB access
   require 'minerva_api/db/arxiv'
+  require 'minerva_api/db/dblp'
 end

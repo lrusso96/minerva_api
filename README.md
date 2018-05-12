@@ -20,9 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-See MinervaApi::Arxiv for details
-
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://gitlab.com/[USERNAME]/minerva_api.
