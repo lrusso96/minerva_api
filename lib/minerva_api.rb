@@ -15,5 +15,5 @@ module MinervaApi
   require 'minerva_api/models/author'
   require 'minerva_api/models/paper'
   # DB access
-  require 'minerva_api/db/Arxiv'
+  require 'minerva_api/db/arxiv'
 end
