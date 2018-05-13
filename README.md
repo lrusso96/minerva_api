@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://gitlab.com/[USERNAME]/minerva_api.
+Bug reports and pull requests are welcome on GitHub at https://gitlab.com/lrusso96/minerva_api.
 
 ## License
 
