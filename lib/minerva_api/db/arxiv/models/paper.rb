@@ -6,7 +6,7 @@ end
 
 module MinervaApi
   module Arxiv
-    require 'Date'
+    require 'date'
     require 'nokogiri'
     # This class represents the Arxiv Paper and extends MinervaApi::Paper
     class Paper < MinervaApi::Paper
