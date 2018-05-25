@@ -2,8 +2,7 @@ module MinervaApi
   ##
   # This module manages all about the Arxiv DB
   module Arxiv
-    # :nodoc:
-    API_URL = 'http://export.arxiv.org/api/query?'.freeze
+    API_URL = 'http://export.arxiv.org/api/query?'.freeze # :nodoc:
     # useful methods
     extend Common
     # include extended models
@@ -29,6 +28,7 @@ module MinervaApi
       s.chomp '+'
       s += '%22'
     end
+    private_class_method :join_words
 
     def self.hash_to_query(hash)
       c = '+AND+'
@@ -59,13 +59,16 @@ module MinervaApi
     #
     # ==== Attributes
     #
-    # * +words+ - a list of string to search for
+    # * +words+ can be:
+    #   * a single word to search for
+    #   * an Array of strings to search for
+    #   * a complex hash
     #
     # ==== Examples
     #
     #    papers = Arxiv.search 'electron'
-    #    papers.size # => 10
-    #    papers.first.class # => Arxiv::Paper
+    #    papers = Arxiv.search ['electron', 'matter']
+    #    h = {}; h[author]="Einstein"; papers = Arxiv.search h
     def self.search(words)
       q = build_query words
       p q
