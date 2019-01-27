@@ -22,8 +22,8 @@ Or install it yourself as:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://gitlab.com/lrusso96/minerva_api.
+Bug reports and pull requests are welcome on GitHub at https://www.github.com/lrusso96/minerva_api.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [GPL v3 License](https://www.gnu.org/licenses/gpl-3.0).
