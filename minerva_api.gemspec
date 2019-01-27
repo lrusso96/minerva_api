@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['lrusso96']
   spec.email         = ['russo.1699981@studenti.uniroma1.it']
 
-  spec.summary       = 'Write a short summary, because RubyGems requires one.'
-  spec.description   = 'Write a longer description or delete this line.'
-  spec.homepage      = 'https://gitlab.com/lrusso96/minerva_api'
-  spec.license       = 'MIT'
+  spec.summary       = 'Simple gem to get infos about Open-Access papers'
+  spec.description   = ''
+  spec.homepage      = 'https://www.github.com/lrusso96/minerva_api'
+  spec.license       = 'GPL-3'
 
   # Prevent pushing this gem to RubyGems.org.
   # To allow pushes either set the 'allowed_push_host'
