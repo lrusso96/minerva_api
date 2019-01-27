@@ -3,24 +3,27 @@ PATH
   specs:
     minerva_api (0.1.1)
       full-name-splitter (~> 0.1.2)
-      nokogiri
+      nokogiri (>= 1.8.5)
 
 GEM
   remote: https://rubygems.org/
   specs:
     full-name-splitter (0.1.2)
-    mini_portile2 (2.3.0)
-    nokogiri (1.8.2-x86-mingw32)
-      mini_portile2 (~> 2.3.0)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.1)
+      mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.1-x86-mingw32)
+      mini_portile2 (~> 2.4.0)
     rake (10.5.0)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
-  bundler (~> 1.16)
+  bundler (~> 2.0.1)
   minerva_api!
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.16.1
+   2.0.1
