@@ -5,24 +5,13 @@ require 'minerva_api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'minerva_api'
   spec.version       = MinervaApi::VERSION
-  spec.authors       = ['lrusso96']
+  spec.authors       = ['luigi russo']
   spec.email         = ['russo.1699981@studenti.uniroma1.it']
 
   spec.summary       = 'Simple gem to get infos about Open-Access papers'
   spec.description   = ''
   spec.homepage      = 'https://www.github.com/lrusso96/minerva_api'
   spec.license       = 'GPL-3'
-
-  # Prevent pushing this gem to RubyGems.org.
-  # To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing
-  # to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'TODO: Set to http://mygemserver.com'
-  else
-    raise 'RubyGems 2.0 or newer is required to protect against ' \
-      'public gem pushes.'
-  end
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -34,6 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'nokogiri', '>= 1.8.5'
   spec.add_runtime_dependency 'full-name-splitter', '~> 0.1.2'
 
-  spec.add_development_dependency 'bundler', '~> 2.0.1'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'bundler', '~> 2.0.2'
+  spec.add_development_dependency 'rake', '~> 12.3'
+  spec.add_development_dependency 'rspec', '~> 3.0'
+
 end
