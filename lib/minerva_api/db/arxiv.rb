@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 module MinervaApi
-  ##
   # This module manages all about the Arxiv DB
   module Arxiv
-    API_URL = 'http://export.arxiv.org/api/query?'.freeze # :nodoc:
+    API_URL = 'http://export.arxiv.org/api/query?'
     # useful methods
     extend Common
     # include extended models
@@ -14,6 +15,7 @@ module MinervaApi
       xml = load_url(url, '//entry', true)
       return unless xml
       return Arxiv::Paper.new(xml) if unique
+
       papers = []
       xml.each { |x| papers << Arxiv::Paper.new(x) }
       papers
@@ -23,10 +25,12 @@ module MinervaApi
     def self.join_words(words)
       l = words.split(' ')
       return words if l.size == 1
+
       s = '%22'
       l.each { |w| s += w + '+' }
       s.chomp '+'
       s += '%22'
+      s
     end
     private_class_method :join_words
 
@@ -51,20 +55,17 @@ module MinervaApi
         return s + 'all:' + words.join('+')
       when Hash
         return s + hash_to_query(words)
+      else
+        return
       end
     end
+
     private_class_method :build_query
 
     # Make a search over Arxiv archive
     #
-    # ==== Attributes
-    #
-    # * +words+ can be:
-    #   * a single word to search for
-    #   * an Array of strings to search for
-    #   * a complex hash
-    #
-    # ==== Examples
+    # @param [String] words
+    # @param [Array] words
     #
     #    papers = Arxiv.search 'electron'
     #    papers = Arxiv.search ['electron', 'matter']
@@ -77,11 +78,7 @@ module MinervaApi
 
     # Get Paper infos
     #
-    # ==== Attributes
-    #
-    # * +id+ - the Arxiv identifier for manuscripts
-    #
-    # ==== Examples
+    # @param [String] id: Arxiv identifier
     #
     #    paper = Arxiv.get '1202.0819'
     #    paper.class # => Arxiv::Paper

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MinervaApi
   module Dblp
     require 'nokogiri'

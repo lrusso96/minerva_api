@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 module MinervaApi
-  ##
   # This module manages all about the Arxiv DB
   module Dblp
     # useful methods
@@ -11,6 +12,7 @@ module MinervaApi
     def self.esearch(url)
       xml = load_url(url, '//info')
       return unless xml
+
       papers = []
       xml.each { |x| papers << Dblp::Paper.new(x) }
       papers
@@ -19,12 +21,7 @@ module MinervaApi
     private_class_method :esearch
 
     # Make a search over Arxiv archive
-    #
-    # ==== Attributes
-    #
-    # * +query+ - a string representing the query
-    #
-    # ==== Examples
+    # @param [String] query
     #
     #    papers = Dblp.search 'electron'
     #    papers.size # => 10

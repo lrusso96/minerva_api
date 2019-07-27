@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module MinervaApi
-  ##
-  # This represents the paper (manusript)
+  # This represents the paper (manuscript)
   class Paper
     # The title of paper
     attr_reader :title
@@ -10,14 +11,13 @@ module MinervaApi
     attr_reader :authors
     # This provides links to online version of the paper
     attr_reader :link
-    # The date of pubblication
+    # The date of publication
     attr_reader :published_date
 
-    ##
-    # returns a formatted date
+    # @@return a formatted date
     #   paper.published # => 'May 13, 2018'
     def published
-      published_date.strftime('%B %d, %Y') unless published_date.nil?
+      published_date&.strftime('%B %d, %Y')
     end
   end
 end

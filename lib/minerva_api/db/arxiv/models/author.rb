@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 module MinervaApi
   module Arxiv
-    ##
-    # This class represents the author of a paper. It extends the superclass
-    # MinervaApi::Author
+    # This class represents the author of a paper.
     class Author < MinervaApi::Author
       def initialize(str) #:nodoc:
         l = str.strip.split("\n")

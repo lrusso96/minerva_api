@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 module MinervaApi
-  # Actual Version
-  #   minerva_api::VERSION # => 0.1.1
-  VERSION = '0.1.1'.freeze
+  # current version
+  VERSION = '0.2.0'
 end

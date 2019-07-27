@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module MinervaApi
-  module Common #:nodoc:
+  module Common
     require 'net/http'
     require 'nokogiri'
 

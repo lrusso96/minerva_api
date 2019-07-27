@@ -1,5 +1,7 @@
-class String #:nodoc:
-  def megastrip #:nodoc:
+# frozen_string_literal: true
+
+class String
+  def megastrip
     strip.split("\n").map!(&:strip).join ' '
   end
 end
@@ -8,7 +10,8 @@ module MinervaApi
   module Arxiv
     require 'date'
     require 'nokogiri'
-    # This class represents the Arxiv Paper and extends MinervaApi::Paper
+
+    # This class represents the Arxiv Paper
     class Paper < MinervaApi::Paper
       def initialize(xml) #:nodoc:
         @title = xml.xpath('title').text.megastrip
