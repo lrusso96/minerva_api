@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'nokogiri', '>= 1.8.5'
+  spec.add_dependency 'nokogiri', '>= 1.10.4'
   spec.add_runtime_dependency 'full-name-splitter', '~> 0.1.2'
 
   spec.add_development_dependency 'bundler', '~> 2.0.2'
